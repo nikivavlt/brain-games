@@ -13,6 +13,6 @@ The player should answer 3 questions correctly. Otherwise, he or she will lose.
 Games can be started using short commands, which consists "package.json". These commands run files from the "bin" (bin/brain-games.js) directory. The file of each game calls the file from the "games" directory, which contains unique variable (game rules) and game related functions. The general logic of all games is placed in "src" directory (src/index.js).
 
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/nikivav/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/nikivav/frontend-project-lvl1/actions)
+[![Actions Status](https://github.com/nikivavlt/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/nikivavlt/frontend-project-lvl1/actions)
 
 <a href="https://codeclimate.com/github/nikivav/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/8b991330399d741ef8fc/maintainability" /></a>
