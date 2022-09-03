@@ -15,4 +15,4 @@ Games can be started using short commands, which consists "package.json". These 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/nikivavlt/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/nikivavlt/frontend-project-lvl1/actions)
 
-<a href="https://codeclimate.com/github/nikivav/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/8b991330399d741ef8fc/maintainability" /></a>
+<a href="https://codeclimate.com/github/nikivavlt/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/92692aede1665fc3ccf2/maintainability" /></a>
