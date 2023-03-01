@@ -1,8 +1,8 @@
 {
-  "name": "@hexlet/code",
-  "version": "1.0.0",
+  "name": "brain-games",
+  "version": "2.0.0",
   "type": "module",
-  "description": "Hexlet Frontend 1st project 'Brain Games'",
+  "description": "Brain Games - is the console application written using JavaScript (Node.js), consisting of 5 built-in games.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

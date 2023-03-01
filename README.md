@@ -12,7 +12,5 @@ The player should answer 3 questions correctly. Otherwise, he or she will lose.
 ### Project structure
 Games can be started using short commands, which consists "package.json". These commands run files from the "bin" (bin/brain-games.js) directory. The file of each game calls the file from the "games" directory, which contains unique variable (game rules) and game related functions. The general logic of all games is placed in "src" directory (src/index.js).
 
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/nikivavlt/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/nikivavlt/frontend-project-lvl1/actions)
-
-<a href="https://codeclimate.com/github/nikivavlt/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/92692aede1665fc3ccf2/maintainability" /></a>
+### Linter status:
+<a href="https://codeclimate.com/github/nikivavlt/brain-games/maintainability"><img src="https://api.codeclimate.com/v1/badges/ff80a8b88e8794aae287/maintainability" /></a>
