@@ -1,4 +1,4 @@
-import gameLogic from '../src/index.js';
+import gameLogic from '../main-logic.js';
 
 const rules = 'What is the result of the expression?';
 

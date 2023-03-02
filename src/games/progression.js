@@ -1,4 +1,4 @@
-import gameLogic from '../src/index.js';
+import gameLogic from '../main-logic.js';
 
 const rules = 'What number is missing in the progression?';
 

@@ -1,20 +1,39 @@
-import readlineSync from 'readline-sync';
+import { requestName, selectGameNumber } from './cli.js';
+import startBrainEven from './games/even.js';
+import startBrainCalc from './games/calc.js';
+import startBrainGCD from './games/gcd.js';
+import startBrainProgression from './games/progression.js';
+import startBrainPrime from './games/prime.js';
 
-const gameLogic = (gameRules, gameQuestionAnswer) => {
+export default () => {
   console.log('Welcome to the Brain Games!');
-  const playerName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${playerName}!`);
-  console.log(gameRules);
 
-  for (let i = 0; i < 3; i += 1) {
-    const [question, answer] = gameQuestionAnswer();
-    console.log(`Question: ${question}`);
-    const playerAnswer = readlineSync.question('Your answer: ');
-    if (String(answer) !== String(playerAnswer)) {
-      return console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${playerName}!`);
-    } console.log('Correct!');
+  const playerName = requestName();
+  console.log(`Hey there, ${playerName}!`);
+
+  while (true) {
+    const selectedNumber = selectGameNumber();
+
+    switch (selectedNumber) {
+      case 0:
+        startBrainEven(playerName);
+        break;
+      case 1:
+        startBrainCalc(playerName);
+        break;
+      case 2:
+        startBrainGCD(playerName);
+        break;
+      case 3:
+        startBrainProgression(playerName);
+        break;
+      case 4:
+        startBrainPrime(playerName);
+        break;
+      case 5:
+        return false;
+      default:
+        throw new Error(`Wrong number selected: ${selectedNumber}`);
+    }
   }
-  return console.log(`Congratulations, ${playerName}!`);
 };
-
-export default gameLogic;

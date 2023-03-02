@@ -1,4 +1,4 @@
-import gameLogic from '../src/index.js';
+import gameLogic from '../main-logic.js';
 
 const rules = 'Find the greatest common divisor of given numbers.';
 
