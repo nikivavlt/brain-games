@@ -1,3 +1,4 @@
+import { getRandomNumber } from '../tools.js';
 import gameLogic from '../main-logic.js';
 
 const rules = 'Find the greatest common divisor of given numbers.';
@@ -11,11 +12,11 @@ const isGCD = (numberOne, numberTwo) => {
 };
 
 const round = () => {
-  const numberOne = Math.round(Math.random() * 100);
-  const numberTwo = Math.round(Math.random() * 100);
+  const numberOne = getRandomNumber();
+  const numberTwo = getRandomNumber();
   return [`${numberOne} ${numberTwo}`, isGCD(numberOne, numberTwo)];
 };
 
-const startBrainGCD = () => gameLogic(rules, round);
+const startBrainGCD = (playerName) => gameLogic(playerName, rules, round);
 
 export default startBrainGCD;

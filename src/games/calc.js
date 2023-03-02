@@ -1,3 +1,4 @@
+import { getRandomNumber } from '../tools.js';
 import gameLogic from '../main-logic.js';
 
 const rules = 'What is the result of the expression?';
@@ -14,14 +15,14 @@ const countAnswer = (numberOne, numberTwo, randomOperator) => {
 };
 
 const round = () => {
-  const numberOne = Math.round(Math.random() * 100);
-  const numberTwo = Math.round(Math.random() * 100);
+  const numberOne = getRandomNumber();
+  const numberTwo = getRandomNumber();
   const randomOperator = createOperator();
   const gameQuestion = `${numberOne} ${randomOperator} ${numberTwo}`;
 
   return [gameQuestion, countAnswer(numberOne, numberTwo, randomOperator)];
 };
 
-const startBrainCalc = () => gameLogic(rules, round);
+const startBrainCalc = (playerName) => gameLogic(playerName, rules, round);
 
 export default startBrainCalc;

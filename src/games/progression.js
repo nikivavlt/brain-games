@@ -20,6 +20,6 @@ const round = () => {
   return [progression.join(' '), answerNumber];
 };
 
-const startBrainProgression = () => gameLogic(rules, round);
+const startBrainProgression = (playerName) => gameLogic(playerName, rules, round);
 
 export default startBrainProgression;

@@ -1,3 +1,4 @@
+import { getRandomNumber } from '../tools.js';
 import gameLogic from '../main-logic.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -12,10 +13,10 @@ const isPrime = (number) => {
 };
 
 const round = () => {
-  const randomNumber = Math.round(Math.random() * 100);
+  const randomNumber = getRandomNumber();
   return [randomNumber, isPrime(randomNumber)];
 };
 
-const startBrainPrime = () => gameLogic(rules, round);
+const startBrainPrime = (playerName) => gameLogic(playerName, rules, round);
 
 export default startBrainPrime;
