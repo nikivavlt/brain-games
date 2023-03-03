@@ -1,10 +1,12 @@
+/* eslint-disable no-confusing-arrow */
 import gameLogic from '../main-logic.js';
+import { getRandomNumber } from '../tools.js';
 
-const rules = 'What number is missing in the progression?';
+const rules = 'what number is missing in the progression?';
 
-const round = () => {
-  const firstNumber = Math.round(Math.random() * 100);
-  const randomNumber = Math.round(Math.random() * 100);
+const generateRound = () => {
+  const firstNumber = getRandomNumber();
+  const randomNumber = getRandomNumber();
 
   const progression = [];
   progression[0] = firstNumber;
@@ -13,13 +15,16 @@ const round = () => {
     progression.push(progression[i - 1] + randomNumber);
   }
 
-  const randomIndex = Math.floor(Math.random() * progression.length);
+  const randomIndex = getRandomNumber(progression.length - 1);
   const answerNumber = progression[randomIndex];
-  progression[randomIndex] = '..';
 
-  return [progression.join(' '), answerNumber];
+  const editedProgression = progression
+    .map((number) => (progression.indexOf(number) === progression.indexOf(answerNumber)) ? '...' : number)
+    .join(' ');
+
+  return [editedProgression, answerNumber];
 };
 
-const startBrainProgression = (playerName) => gameLogic(playerName, rules, round);
+const startBrainProgression = (playerName) => gameLogic({ playerName, rules, generateRound });
 
 export default startBrainProgression;

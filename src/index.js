@@ -1,4 +1,4 @@
-import { requestName, selectGameNumber } from './cli.js';
+import { requestName, selectGameNumber } from './tools.js';
 import startBrainEven from './games/even.js';
 import startBrainCalc from './games/calc.js';
 import startBrainGCD from './games/gcd.js';
@@ -9,7 +9,7 @@ export default () => {
   console.log('Welcome to the Brain Games!');
 
   const playerName = requestName();
-  console.log(`Hey there, ${playerName}!`);
+  console.log(`Hello, ${playerName}!`);
 
   while (true) {
     const selectedNumber = selectGameNumber();

@@ -15,7 +15,7 @@ const selectGameNumber = () => {
   return Number(readlineSync.question(''));
 };
 
-const getRandomNumber = () => Math.round(Math.random() * 100);
+const getRandomNumber = (maximum = 100) => Math.round(Math.random() * maximum);
 
 export {
   requestName,

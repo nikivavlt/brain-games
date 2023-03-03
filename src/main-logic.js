@@ -1,16 +1,21 @@
 import readlineSync from 'readline-sync';
 
-export default (playerName, gameRules, gameQuestionAnswer) => {
-  console.log(`\n${playerName}, ${gameRules}`);
+export default (gameData) => {
+  console.log(`\n${gameData.playerName}, ${gameData.rules}`);
 
-  for (let i = 0; i < 3; i += 1) {
-    const [question, answer] = gameQuestionAnswer();
-    console.log(`Question: ${question}`);
+  const numberOfRounds = 3;
+
+  for (let i = 0; i < numberOfRounds; i += 1) {
+    const [roundQuestion, correctAnswer] = gameData.generateRound();
+    console.log(`Question: ${roundQuestion}`, '\x1b[31m');
+    console.log(`Answer (for tests): ${correctAnswer}`, '\x1b[0m');
     const playerAnswer = readlineSync.question('Your answer: ');
 
-    if (String(answer) !== playerAnswer) {
-      return console.log(`'${playerAnswer}' is wrong answer. Correct answer was '${answer}'. Let's try again, ${playerName}!`);
-    } console.log('Correct answer!');
+    if (String(correctAnswer) !== playerAnswer) {
+      console.log(`'${playerAnswer}' is wrong answer. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${gameData.playerName}!`);
+      return;
+    } console.log('Correct answer!\n');
   }
-  return console.log(`Congratulations, ${playerName}. You won!`);
+  console.log(`Congratulations, ${gameData.playerName}. You won!`);
 };
