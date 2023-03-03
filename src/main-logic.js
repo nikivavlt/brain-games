@@ -7,8 +7,8 @@ export default (gameData) => {
 
   for (let i = 0; i < numberOfRounds; i += 1) {
     const [roundQuestion, correctAnswer] = gameData.generateRound();
-    console.log(`Question: ${roundQuestion}`, '\x1b[31m');
-    console.log(`Answer (for tests): ${correctAnswer}`, '\x1b[0m');
+    console.log(`Question: ${roundQuestion}`);
+
     const playerAnswer = readlineSync.question('Your answer: ');
 
     if (String(correctAnswer) !== playerAnswer) {
