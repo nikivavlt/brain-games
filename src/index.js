@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-condition */
 import { requestName, selectGameNumber } from './tools.js';
 import startBrainEven from './games/even.js';
 import startBrainCalc from './games/calc.js';
