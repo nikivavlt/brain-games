@@ -1,5 +1,7 @@
-### Linter status:
+### Code quality maintainability:
 <a href="https://codeclimate.com/github/nikivavlt/brain-games/maintainability"><img src="https://api.codeclimate.com/v1/badges/ff80a8b88e8794aae287/maintainability" /></a>
+### GitHub Actions:
+![GitHub Actions](https://github.com/nikivavlt/brain-games/actions/workflows/main.yml/badge.svg)
 ___
 
 ### Description
